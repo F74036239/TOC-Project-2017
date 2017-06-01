@@ -322,4 +322,4 @@ After the input is "我要走了" , no matter which state is , it will `advance`
 		* Reply: "掰掰"
 		
 ## Author
-[Lee-W](https://github.com/Lee-W) [F74036239]
+[Lee-W](https://github.com/Lee-W) , F74036239
