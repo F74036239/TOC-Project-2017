@@ -58,28 +58,28 @@ After the input is "我要走了" , no matter which state is , it will `advance`
 * user
 	* Input: "療癒"
 		* go to `state1`
-		* Reply: "....[動物][植物][都不要]"
+		* Reply: "[動物][植物][都不要]"
 
 	* Input: "搞笑"
 		* go to `state2`
-		* Reply: "....[笑話][影片][其他][都不要]"
+		* Reply: "[笑話][影片][其他][都不要]"
 		
 	* Input: "負能量"
 		* go to `state3`
-		* Reply: "....[粉絲專頁][其他][都不要]"
+		* Reply: "[粉絲專頁][其他][都不要]"
 
 	* Input: "正能量"
 		* go to `state4`
-		* Reply: "....[經典][溫暖][都不要]"
+		* Reply: "[經典][溫暖][都不要]"
 
 * state1
 	* Input: "動物"
 		* go to `state11`
-		* Reply: "....[狗][貓][其他][不要了]"
+		* Reply: "[狗][貓][其他][不要了]"
 
 	* Input: "植物"
 		* go to `state12`
-		* Reply: "....[花][草][不要了]"
+		* Reply: "[花][草][不要了]"
 		
 	* Input: "都不要"
 		* go to `user`
@@ -88,15 +88,15 @@ After the input is "我要走了" , no matter which state is , it will `advance`
 * state2
 	* Input: "笑話"
 		* go to `state21`
-		* Reply: "....[嘿嘿嘿][funny][換別的]"
+		* Reply: "[嘿嘿嘿][funny][換別的]"
 
 	* Input: "影片"
 		* go to `state22`
-		* Reply: "....[豆豆先生][這群人][監獄兔][換別的]"
+		* Reply: "[豆豆先生][這群人][監獄兔][換別的]"
 		
 	* Input: "其他"
 		* go to `state23`
-		* Reply: "....[進來看看][換別的]"
+		* Reply: "[進來看看][換別的]"
 
 	* Input: "都不要"
 		* go to `user`
@@ -105,11 +105,11 @@ After the input is "我要走了" , no matter which state is , it will `advance`
 * state3
 	* Input: "粉絲專頁"
 		* go to `state31`
-		* Reply: "....[厭世動物園][厭世哲學家][來點負能量][夠了]"
+		* Reply: "[厭世動物園][厭世哲學家][來點負能量][夠了]"
 		
 	* Input: "其他"
 		* go to `state32`
-		* Reply: "....[進來看看][夠了]"
+		* Reply: "[進來看看][夠了]"
 
 	* Input: "都不要"
 		* go to `user`
@@ -118,11 +118,11 @@ After the input is "我要走了" , no matter which state is , it will `advance`
 * state4
 	* Input: "經典"
 		* go to `state41`
-		* Reply: "....[厭世動物園][厭世哲學家][來點負能量][不用了]"
+		* Reply: "[厭世動物園][厭世哲學家][來點負能量][不用了]"
 		
 	* Input: "溫暖"
 		* go to `state42`
-		* Reply: "....[溫暖1][溫暖2][不用了]"
+		* Reply: "[溫暖1][溫暖2][不用了]"
 
 	* Input: "都不要"
 		* go to `user`
@@ -251,6 +251,75 @@ After the input is "我要走了" , no matter which state is , it will `advance`
 	* Input: "不用了"
 		* go to `user`
 		* Reply: "[經典][溫暖][都不要]"
+		
+* state111,state112,state113
+	* Input: "不要了"
+		* go to `state11`
+		* Reply: "[狗][貓][其他][不要了]"
+
+* state121,122,123
+	* Input: "不要了"
+		* go to `state12`
+		* Reply: "[花][草][不要了]"
+		
+* state211
+	* Input: "..."
+		* go to `state21`
+		* Reply: "[嘿嘿嘿][funny][換別的]"
+
+* state212
+	* Input: "不好笑"
+		* go to `state21`
+		* Reply: "[嘿嘿嘿][funny][換別的]"
+
+* state221,222,223
+	* Input: "換別的"
+		* go to `state22`
+		* Reply: "[豆豆先生][這群人][監獄兔][換別的]"
+		
+* state231
+	* Input: "爛透了"
+		* go to `state23`
+		* Reply: "[進來看看][換別的]"
+		
+* state311,312,313
+	* Input: "夠了"
+		* go to `state31`
+		* Reply: "[厭世動物園][厭世哲學家][來點負能量][夠了]"
+
+		
+* state321
+	* Input: "夠了"
+		* go to `state32`
+		* Reply: "[進來看看][換別的]"
+
+* state411,412,413
+	* Input: "謝謝"
+		* go to `state41`
+		* Reply: "[經典1][經典2][經典3][不用了]"
+
+* state421
+	* Input: "太熱了"
+		* go to `state42`
+		* Reply: "...."
+		
+	* Input: "不用了"
+		* go to `user`
+		* Reply: "[溫暖1][溫暖2][不用了]"		
+	
+* state422
+	* Input: "一點都不溫暖"
+		* go to `state42`
+		* Reply: "...."
+		
+	* Input: "不用了"
+		* go to `user`
+		* Reply: "[溫暖1][溫暖2][不用了]"
+
+* all state
+	* Input: "我要走了"
+		* go to `end`
+		* Reply: "掰掰"
 		
 ## Author
 [Lee-W](https://github.com/Lee-W) [F74036239]
